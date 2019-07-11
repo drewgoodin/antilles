@@ -9,7 +9,7 @@ Use the generated ```site/``` directory as your webroot, or copy its contents to
 
 Add a ```style.css``` file to the webroot if you wish; this file is already referred to by the ```autohandler``` template.
 
-Antilles requires HTML::Mason. Use ```cpanm``` to get it and its dependencies.
+Antilles requires HTML::Mason and Text::Markdown. Use ```cpanm``` to get them and their dependencies.
 
 ### Advanced
 
