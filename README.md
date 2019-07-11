@@ -1,4 +1,4 @@
-**Antilles** is a very lightweight static, flat-file site generator in Perl/Mason. It allows you to write your pages entirely in Markdown.
+**Antilles** is a very lightweight static site generator in Perl/Mason. It allows you to write your pages entirely in Markdown.
 
 ### Quickstart
 Clone this repository, change to the ```./pages/markdown``` directory, and start creating. There is no forced naming convention for your Markdown files, but keep in mind that their filenames will be used as-is in the generated site. Your server of choice may have strong opinions on how you name your files.
