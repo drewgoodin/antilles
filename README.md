@@ -3,9 +3,9 @@
 ### Quickstart
 Clone this repository, change to the ```./pages/markdown``` directory, and start creating. There is no forced naming convention for your Markdown files, but keep in mind that their filenames will be used as-is in the generated site. Your server of choice may have strong opinions on how you name your files.
 
-Running ```./generate.pl``` will duplicate whatever heirarchy you create in the markdown directory into the ```site``` directory, except it'll all be real, live HTML.
+Running ```./generate.pl``` will duplicate whatever heirarchy you create in the markdown directory into a ```site``` directory, except it'll all be real, live HTML.
 
-Use the ```site``` directory as your webroot, or copy its contents to your GitHub Pages repository (or wherever else!).
+Use the generated ```site``` directory as your webroot, or copy its contents to your GitHub Pages repository (or wherever else!).
 
 Antilles requires HTML::Mason. Use ```cpanm``` to get it and its dependencies.
 
