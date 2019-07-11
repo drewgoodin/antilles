@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use HTML::Mason::Interp;
 
+mkdir 'site' unless -d 'site';
 my %cfg;
 
 open my $fh, '<', 'cfg.txt';
