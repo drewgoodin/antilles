@@ -5,7 +5,9 @@ Clone this repository, change to the ```pages/``` directory, and start creating.
 
 Running ```./generate.pl``` will duplicate whatever heirarchy you create in the markdown directory into a ```site/``` directory, except it'll all be real, live HTML.
 
-Use the generated ```site/``` directory as your webroot, or copy its contents to your GitHub Pages repository (or wherever else!).
+Use the generated ```site/``` directory as your webroot, or copy its contents to your GitHub Pages repository (or wherever else!). 
+
+Add a ```style.css``` file to the webroot if you wish; this file is already referred to by the ```autohandler``` template.
 
 Antilles requires HTML::Mason. Use ```cpanm``` to get it and its dependencies.
 
