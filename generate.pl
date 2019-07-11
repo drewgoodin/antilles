@@ -31,21 +31,22 @@ sub trav {
     next if $_ eq '.';
     next if $_ eq '..';
     next if $_ eq '.gitignore';
+    next if $_ eq 'autohandler';
     my $path = "$dir/$_";
     if (-f "$path") {
       $interp->exec("/$path", %cfg);
-      $path =~ s/pages\/markdown\///;
+      $path =~ s/pages\///;
       open my $fh, '>', "site/$path";
       print $fh $buf;
       $buf = undef;
     }
     if (-d "$path") {
       my $tmp = $path;
-      $tmp =~ s/pages\/markdown\///;
+      $tmp =~ s/pages\///;
       mkdir "site/$tmp";
       trav("$path")
     }
   }
 }
 
-trav('pages/markdown');
+trav('pages');
