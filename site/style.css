@@ -1,0 +1,36 @@
+body {
+    font-family:serif;
+    #background-color:HSL(120,30%,100%);
+    background-color:BlanchedAlmond;
+}
+pre {
+    background-color:HSL(120,50%,95%);
+    display:inline-block;
+    border:1px solid black;
+    border-radius:5px;
+    position:relative;
+    left:7px;
+    padding:10px;
+    padding-right:70px;
+}
+.tags {
+    font-size:90%;
+}
+.emph {
+    font-style:italic;
+}
+.posts {
+    display:block;
+    #background-color:HSL(120,20%,95%);
+    background-color:NavajoWhite;
+    height: 300px;
+    overflow-y: auto;
+}
+a {
+	text-decoration: none;
+	font-family: sans-serif;
+	color: navy;
+}
+#tags {
+	max-width: 750px;
+}
