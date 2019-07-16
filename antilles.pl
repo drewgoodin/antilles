@@ -9,7 +9,7 @@ my $buf;
 my $directory;
 my $path;
 my $interp = HTML::Mason::Interp->new(
-  comp_root => $ENV{PWD},
+  comp_root => "$ENV{PWD}/pages",
 );
 
 $interp->out_method(\$buf);
@@ -26,8 +26,8 @@ close $fh;
 
 my %dispatch = (
   pages     => sub {
-                      $interp->exec("/$path", %cfg);
                       $path =~ s/pages\///;
+                      $interp->exec("/$path", %cfg);
                       open my $fh, '>', "site/$path" or die "could not write to file in site directory";
                       print $fh $buf;
                       $buf = undef;
