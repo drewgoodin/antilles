@@ -1,5 +1,0 @@
-% use Text::Markdown qw!markdown!;
-% $m->call_next();
-<%filter>
-$_ = markdown($_);
-</%filter>
