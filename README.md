@@ -9,7 +9,7 @@ Use the generated ```site/``` directory as your webroot, or copy its contents to
 
 Add CSS/JS/images and whatever non-template-processed things you have to the ```./resources``` directory. These will be copied over to the webroot (without 'resources' prepending). Add a ```./resources/style.css``` file before generating for the first time, if you wish. This file is already referred to by the top level template.
 
-Antilles requires HTML::Mason. Use ```cpanm``` to get them and their dependencies.
+Antilles requires HTML::Mason. Use ```cpanm``` to get it and its dependencies.
 
 ### Advanced
 
