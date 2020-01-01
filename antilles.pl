@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use HTML::Mason::Interp;
 use File::Copy qw!copy!;
+use File::Path;
 
 my %cfg;
 my $buf;
@@ -14,7 +15,8 @@ my $interp = HTML::Mason::Interp->new(
 
 $interp->out_method(\$buf);
 
-mkdir 'site' unless -d 'site';
+rmtree 'site';
+mkdir 'site';
 
 open my $fh, '<', 'cfg.txt';
 for (<$fh>) {
