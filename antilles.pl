@@ -15,8 +15,8 @@ my $interp = HTML::Mason::Interp->new(
 
 $interp->out_method(\$buf);
 
-rmtree 'site';
-mkdir 'site';
+rmtree 'html';
+mkdir 'html';
 
 open my $fh, '<', 'cfg.txt';
 for (<$fh>) {
@@ -30,13 +30,13 @@ my %dispatch = (
   pages     => sub {
                       $interp->exec("/$path", %cfg);
                       $path =~ s/pages\///;
-                      open my $fh, '>', "site/$path" or die "could not write to file in site directory";
+                      open my $fh, '>', "html/$path" or die "could not write to file in html directory";
                       print $fh $buf;
                       $buf = undef;
                },
   resources => sub {
                      $path =~ s/resources\///;
-                     copy "resources/$path", "site/$path" or die "could not copy file to site directory";
+                     copy "resources/$path", "html/$path" or die "could not copy file to html directory";
                }
 );
 
@@ -54,7 +54,7 @@ sub trav {
     if (-d "$path") {
       my $tmp = $path;
       $tmp =~ s/$directory\///;
-      mkdir "site/$tmp" unless -d "site/$tmp";
+      mkdir "html/$tmp" unless -d "html/$tmp";
       trav("$path");
     }
   }
