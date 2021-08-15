@@ -1,4 +1,4 @@
-**Antilles** is a very lightweight static site generator in Perl/Mason. OK, fine, it's a single script that traverses a couple of directories: one to place your Mason templating components (these can be pure HTML if you wish), the other containing files that should not be processed. All HTML is then wrapped in a small amount of boilerplate, and a web root directory containing everything (preserving structure) is created.
+**Antilles** is a basic site generator. It is a single script that traverses a couple of directories: one to place your Mason templating components (these can be pure HTML if you wish), the other containing files that should be left as-is (images, etc.). All HTML is then wrapped in a small amount of boilerplate, and a web root directory containing everything (preserving structure) is created.
 
 ### Quickstart
 Clone this repository, change to the ```pages/``` directory, and start creating. There is no forced naming convention for your files, but keep in mind that their filenames will be used as-is in the generated site. Your server of choice may have strong opinions on how you name your files.
